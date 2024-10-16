@@ -28,8 +28,6 @@ const bot = new TelegramBot(process.env.BOT_TOKEN as string);
 
         const newCars = ids.filter(id => !persistedIds.includes(id))
 
-        newCars.push("111024165")
-
         if(newCars.length > 0 && newCars.length < 50){
             db.insertMany(newCars)
 
@@ -40,7 +38,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN as string);
         else{
             console.log("no new cars(((")
         }
-    }, 10000)
+    }, 120000)
 })()
 
 

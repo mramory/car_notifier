@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "src/main.ts",
   "scripts": {
+    "build": "tsc",
+    "run": "node build/main.js",
     "start": "tsc && node build/main.js"
   },
   "license": "MIT",

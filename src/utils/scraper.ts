@@ -39,7 +39,7 @@ class Scraper {
 
     async getIds() {
         await this.loadAllCars()
-        await this.wait(2000)
+        await this.wait(5000)
         return await this.page.$$eval(".listing-item__link", link => {
             const href = link.map(link => link.getAttribute("href") as string)
             return href.map(href => href.split("/")[3])
