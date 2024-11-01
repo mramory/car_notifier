@@ -40,7 +40,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN as string);
         else{
             console.log("no new cars(((")
         }
-    }, 600000)
+    }, 20000)
 })()
 
 
