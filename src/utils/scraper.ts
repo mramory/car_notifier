@@ -8,7 +8,7 @@ class Scraper {
     }
 
     async goTo(url: string) {
-        await this.page.goto(url);
+        await this.page.goto(url, {timeout: 30000});
 
         await this.page.setViewport({width: 1080, height: 1024});
     }
