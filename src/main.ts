@@ -11,7 +11,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN as string);
     console.log("Started")
     const baseUrl = process.env.AV_BY_URL as string
 
-    const browser = await puppeteer.launch({args: ['--no-sandbox']});
+    const browser = await puppeteer.launch({args: ['--no-sandbox'], headless: true});
     console.log("Browser Launched")
     const page = await browser.newPage();
 
