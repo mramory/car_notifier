@@ -12,7 +12,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN as string);
     const baseUrl = process.env.AV_BY_URL as string
 
     const browser = await puppeteer.launch({args: ['--no-sandbox']});
-    console.log("Browser launched")
+    console.log("Browser Launched")
     const page = await browser.newPage();
 
     const scraper = new Scraper(page);
