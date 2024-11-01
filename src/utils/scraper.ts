@@ -14,7 +14,7 @@ class Scraper {
     }
 
     async waitForLoad() {
-        await this.page.waitForSelector(".paging__button > a:not([aria-disabled=\"true\"])")
+        await this.page.waitForSelector(".paging__button > a:not([aria-disabled=\"true\"])", {timeout: 10000})
     }
 
     async wait(ms: number) {
